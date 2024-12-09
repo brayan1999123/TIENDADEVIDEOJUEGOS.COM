@@ -1,0 +1,171 @@
+/* Estilos base */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body, html {
+    font-family: Arial, sans-serif;
+    line-height: 1.6;
+    margin: 0;
+    padding: 0;
+    height: 100%;
+    position: relative;
+}
+
+/* Fondo de la página */
+body {
+    background: url('images/background.png') no-repeat center center fixed;
+    background-size: cover; /* Asegura que la imagen cubra toda el área visible */
+}
+
+/* Desenfoque en la imagen de fondo */
+body::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: url('images/background.png') no-repeat center center/cover;
+    filter: blur(5px); /* Ajusta el desenfoque según sea necesario */
+    z-index: -1; /* Asegura que esté detrás del contenido */
+}
+
+/* Menú de Navegación */
+nav {
+    background: #333;
+    color: #fff;
+    padding: 10px 20px;
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+}
+
+.nav-menu {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    list-style: none;
+}
+
+.nav-menu li {
+    margin: 0 10px;
+    position: relative;
+}
+
+.nav-menu a {
+    color: #fff;
+    text-decoration: none;
+    padding: 8px 12px;
+    display: block;
+    transition: background 0.3s, color 0.3s;
+}
+
+.nav-menu a:hover {
+    background: #555;
+    border-radius: 4px;
+}
+
+.dropdown-content {
+    display: none;
+    position: absolute;
+    background: #444;
+    list-style: none;
+    padding: 5px 0;
+    top: 100%;
+    left: 0;
+    min-width: 150px;
+    border-radius: 4px;
+}
+
+.dropdown:hover .dropdown-content {
+    display: block;
+}
+
+.dropdown-content li {
+    padding: 0;
+}
+
+.dropdown-content a {
+    padding: 10px;
+}
+
+.search-bar input {
+    padding: 5px;
+    font-size: 16px;
+    border: none;
+    border-radius: 4px;
+}
+
+/* Banner Principal */
+.main-banner {
+    height: 100vh; /* Hace que el banner ocupe toda la altura de la ventana */
+    color: #fff;
+    text-align: center;
+    background: url('images/banner-background.jpg') no-repeat center center/cover;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.banner-content {
+    max-width: 600px;
+    padding: 20px;
+    background: rgba(0, 0, 0, 0.5); /* Fondo oscuro con 50% de opacidad */
+    border-radius: 8px;
+}
+
+.banner-content h1, .banner-content p {
+    color: #fff; /* Blanco para buen contraste con fondo oscuro */
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.7); /* Sombra negra con 70% de opacidad */
+}
+
+/* Sección de Juegos */
+.game-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr); /* 3 juegos por fila */
+    gap: 20px; /* Espacio entre los juegos */
+    padding: 20px;
+}
+
+.game-card {
+    background: none; /* Elimina el fondo blanco */
+    border-radius: 8px;
+    overflow: hidden;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    transition: transform 0.3s, box-shadow 0.3s;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.game-card img {
+    width: 100%; /* Asegura que la imagen ocupe todo el ancho del contenedor */
+    height: auto; /* Mantiene la proporción original de la imagen */
+    max-height: 300px; /* Limita la altura máxima de la imagen para mantener uniformidad */
+    object-fit: cover; /* Asegura que la imagen cubra el área definida sin distorsionarse */
+}
+
+.game-card h3, .game-card .price {
+    background: rgba(0, 0, 0, 0.5); /* Fondo oscuro con 50% de opacidad */
+    color: #fff; /* Blanco para buen contraste con fondo oscuro */
+    padding: 10px;
+    border-radius: 5px; /* Opcional: redondear bordes */
+    text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.7); /* Sombra negra con 70% de opacidad */
+}
+
+/* Footer */
+footer {
+    background: #333;
+    color: #fff;
+    text-align: center;
+    padding: 10px 20px;
+}
+
+.social-media a {
+    color: #fff;
+    text-decoration: none;
+    margin: 0 10px;
+}

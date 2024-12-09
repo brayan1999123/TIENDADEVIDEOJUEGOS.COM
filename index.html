@@ -1,0 +1,229 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tienda de Videojuegos</title>
+    <link rel="stylesheet" href="styles.css">
+    <style>
+        .nav-menu {
+            list-style: none;
+            padding: 0;
+            margin: 0;
+            display: flex;
+            background-color: #333;
+        }
+
+        .nav-menu li {
+            position: relative;
+        }
+
+        .nav-menu li a {
+            display: block;
+            color: white;
+            padding: 14px 20px;
+            text-decoration: none;
+        }
+
+        .nav-menu li a:hover {
+            background-color: #555;
+        }
+
+        .submenu {
+            display: none;
+            position: absolute;
+            top: 100%;
+            left: 0;
+            background-color: #333;
+            list-style: none;
+            padding: 0;
+            margin: 0;
+            z-index: 1000;
+        }
+
+        .submenu li a {
+            padding: 10px 20px;
+            white-space: nowrap;
+        }
+
+        .submenu li a:hover {
+            background-color: #555;
+        }
+
+        .nav-menu li:hover .submenu {
+            display: block;
+        }
+
+        .game-card {
+            display: block;
+            text-decoration: none;
+            color: inherit;
+            text-align: center;
+            border: 1px solid #ddd;
+            border-radius: 8px;
+            overflow: hidden;
+            transition: transform 0.3s;
+        }
+
+        .game-card:hover {
+            transform: scale(1.05);
+        }
+
+        .game-card img {
+            width: 100%;
+            height: auto;
+        }
+
+        .price {
+            font-size: 1.2em;
+            font-weight: bold;
+            margin: 10px 0;
+        }
+
+        .main-banner {
+            background-image: url('images/banner.jpg');
+            background-size: cover;
+            background-position: center;
+            color: white;
+            text-align: center;
+            padding: 50px 0;
+        }
+
+        .banner-content {
+            padding: 20px;
+        }
+
+        .game-grid {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 20px;
+            justify-content: center;
+        }
+
+        .game-card {
+            width: 200px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        }
+
+        footer {
+            background-color: #333;
+            color: white;
+            text-align: center;
+            padding: 10px;
+        }
+
+        .social-media a {
+            color: #ddd;
+            text-decoration: none;
+            margin: 0 5px;
+        }
+
+        .social-media a:hover {
+            color: white;
+        }
+    </style>
+</head>
+<body>
+    <!-- Menú de Navegación -->
+    <nav>
+        <ul class="nav-menu">
+            <li><a href="index.html">Inicio</a></li>
+            <li><a href="index.html#tienda">Tienda</a></li>
+            <li><a href="#">Categorías</a>
+                <ul class="submenu">
+                    <li><a href="rpg.html">RPG</a></li>
+                    <li><a href="accion.html">Acción</a></li>
+                    <li><a href="aventura.html">Aventura</a></li>
+                    <li><a href="estrategia.html">Estrategia</a></li>
+                </ul>
+            </li>
+            <li><a href="destacados.html">Destacados</a></li> <!-- Actualizado -->
+        </ul>
+    </nav>
+
+    <!-- Banner Principal -->
+    <header class="main-banner">
+        <div class="banner-content">
+            <h1>Bienvenido a la Tienda de Videojuegos</h1>
+            <p>Descubre los últimos títulos y promociones</p>
+        </div>
+    </header>
+
+    <!-- Sección de Tienda -->
+    <section id="tienda">
+        <h2>Tienda</h2>
+        <div class="game-grid">
+            <!-- Juego 1 -->
+            <a href="detalle-call-of-duty-black-ops.html" class="game-card">
+                <img src="images/cod-black-ops.jpg" alt="Call of Duty: Black Ops">
+                <h3>Call of Duty: Black Ops</h3>
+                <p class="price">$59.99</p>
+            </a>
+            <!-- Juego 2 -->
+            <a href="detalle-dota-2.html" class="game-card">
+                <img src="images/dota-2.jpg" alt="Dota 2">
+                <h3>Dota 2</h3>
+                <p class="price">Gratis</p>
+            </a>
+            <!-- Juego 3 -->
+            <a href="detalle-elden-ring.html" class="game-card">
+                <img src="images/elden-ring.jpg" alt="Elden Ring">
+                <h3>Elden Ring</h3>
+                <p class="price">$59.99</p>
+            </a>
+            <!-- Juego 4 -->
+            <a href="detalle-the-last-of-us.html" class="game-card">
+                <img src="images/the-last-of-us.jpg" alt="The Last of Us">
+                <h3>The Last of Us</h3>
+                <p class="price">$49.99</p>
+            </a>
+            <!-- Juego 5 -->
+            <a href="detalle-dead-space.html" class="game-card">
+                <img src="images/dead-space.jpg" alt="Dead Space">
+                <h3>Dead Space</h3>
+                <p class="price">$69.99</p>
+            </a>
+            <!-- Juego 6 -->
+            <a href="detalle-hollow-knight.html" class="game-card">
+                <img src="images/hollow-knight.jpg" alt="Hollow Knight">
+                <h3>Hollow Knight</h3>
+                <p class="price">$14.99</p>
+            </a>
+            <!-- Juego 7 -->
+            <a href="detalle-it-takes-two.html" class="game-card">
+                <img src="images/it-takes-two.jpg" alt="It Takes Two">
+                <h3>It Takes Two</h3>
+                <p class="price">$39.99</p>
+            </a>
+            <!-- Juego 8 -->
+            <a href="detalle-left-4-dead.html" class="game-card">
+                <img src="images/left-4-dead.jpg" alt="Left 4 Dead">
+                <h3>Left 4 Dead</h3>
+                <p class="price">$29.99</p>
+            </a>
+            <!-- Juego 9 -->
+            <a href="detalle-warframe.html" class="game-card">
+                <img src="images/warframe.jpg" alt="Warframe">
+                <h3>Warframe</h3>
+                <p class="price">Gratis</p>
+            </a>
+            <!-- Juego 10 -->
+            <a href="detalle-dark-souls.html" class="game-card">
+                <img src="images/dark-souls.jpg" alt="Dark Souls">
+                <h3>Dark Souls</h3>
+                <p class="price">$39.99</p>
+            </a>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <p>© 2024 Tienda de Videojuegos. Todos los derechos reservados.</p>
+        <div class="social-media">
+            <a href="#">Facebook</a> | 
+            <a href="#">Twitter</a> | 
+            <a href="#">Instagram</a>
+        </div>
+    </footer>
+</body>
+</html>
